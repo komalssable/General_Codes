@@ -1,0 +1,6 @@
+function sumOfNaturals(num) {
+	if(num <= 1) 
+		return 1; 
+	return num + sumOfNaturals(num - 1);	
+}
+sumOfNaturals(4);
