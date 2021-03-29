@@ -1,0 +1,79 @@
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    if(strs.length==0) {
+        return "";
+    }
+    var ch=0;
+    var count=0;
+    var string="";
+    var strs1=strs[0].split('');
+    for(var i=0;i<strs1.length;i++) {
+        for(var j=0;j<strs.length;j++) {
+            if(strs1[i]==strs[j].charAt(ch)) {
+                count++;
+                if(count == strs.length) {
+                    string+=strs1[i];
+                    ch++;
+                    count=0;
+                    console.log(string);
+                    break;
+                }
+            }
+            else {
+                return string;
+            }
+        }
+    }
+    return string;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*var longestCommonPrefix = function(strs) {
+    if (strs.length === 0) {
+        return '';
+    }
+    if(strs.length===1){
+        return strs.toString();
+    }
+    var string=[];
+ 
+    for(let i=1;i<strs.length;i++) {
+        for(let j=0;j<strs[i].length;j++) {
+            if(strs[i].charAt(j)===strs[0].charAt(j)){
+                if(i!==strs.length-1){
+                    console.log("i",i);
+                    console.log("j",j);
+                    break;
+                }else{
+                    string[j]=strs[0].charAt(j);
+                }
+               
+                
+            }else {break;}
+          
+        } 
+    }
+    return string.toString().replace(/\,/g,'');
+};*/

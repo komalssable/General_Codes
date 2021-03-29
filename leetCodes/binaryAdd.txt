@@ -1,0 +1,9 @@
+/**
+ * @param {string} a
+ * @param {string} b
+ * @return {string}
+ */
+var addBinary = function(a, b) {
+  var dec = Number(parseInt(a, 2)) + Number(parseInt(b, 2));
+    return dec.toString(2);  
+};

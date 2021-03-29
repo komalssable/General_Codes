@@ -1,0 +1,19 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+let positive = true;
+    if (x < 0) {
+        positive = false;
+        x *= -1;
+    }
+    let reversedNumber = parseInt(x.toString().split('').reverse().join(''));
+    if (!positive) {
+        reversedNumber *= -1;
+    }
+    if (reversedNumber > 2147483647 || reversedNumber < -2147483648) {
+        return 0;
+    }
+	return reversedNumber;
+}  
